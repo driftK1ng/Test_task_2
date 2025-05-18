@@ -10,7 +10,7 @@ def strict(func):
             if (expected != type(real)):
                 raise TypeError
         value = func(*args)
-        if type(value) != return_type:
+        if return_type != type(value):
             raise TypeError
         return value
     return wrapper
