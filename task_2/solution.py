@@ -47,6 +47,8 @@ def write_in_file(data: tuple, mode: str):
         writer.writerow(data)
 
 def solution():
+    """Делает запросы и записывает данные в файл
+    """
     write_in_file(header, mode="w")
     data: dict = {}
     link: str = page_url
@@ -62,4 +64,5 @@ def solution():
             del data[value[0]]
     write_in_file(tuple(data.items())[0], "a")
 
-solution()
+if __name__ == "__main__":
+    solution()
